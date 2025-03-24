@@ -1,0 +1,17 @@
+#root {
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Lexend', 'sans-serif';
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Quicksand', 'sans-serif';
+}
+
+h1 { font-size: 2rem;}
+
+h2 { font-size: 1.5rem;}
+
+h3 { font-size: 1.25rem;}
