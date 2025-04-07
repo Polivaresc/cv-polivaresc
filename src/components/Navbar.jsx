@@ -10,7 +10,7 @@ function Navbar () {
     ]
 
     return (
-        <nav className="flex gap-5 justify-center text-purple-400 font-medium">
+        <nav className="flex gap-7 justify-center text-purple-400 font-medium">
             {links.map(link => (
                 <a  href={`#${link.id}`}
                     key={link.id}

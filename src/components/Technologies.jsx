@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faCircleLeft, faCircleRight } from '@fortawesome/free-regular-svg-icons';
 
 function Technologies() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -26,18 +26,11 @@ function Technologies() {
         if (window.innerWidth >= 1024) {
           return 8; 
         } else if (window.innerWidth >= 768) {
-          return 5; 
+          return 4; 
         } else {
           return 3; 
         }
       };
-
-    useEffect(() => {
-        const handleResize = () => setImagesPerPage(getImagesPerPage());
-        window.addEventListener("resize", handleResize);
-        handleResize();
-        return () => window.removeEventListener("resize", handleResize);
-    });
 
     const nextSlide = () => {
         if (currentIndex + imagesPerPage < images.length) {
@@ -54,28 +47,39 @@ function Technologies() {
         }
     };
 
+    useEffect(() => {
+        const handleResize = () => setImagesPerPage(getImagesPerPage());
+        window.addEventListener("resize", handleResize);
+        handleResize();
+        return () => window.removeEventListener("resize", handleResize);
+    });
+
     return (
-        <div className="flex items-center">
-            <button onClick={prevSlide} className="border max-h-fit px-2 py-1 text-xs md:text-base cursor-pointer duration-250 ease-in hover:text-purple-400">
-                <FontAwesomeIcon icon={faArrowLeft} />
-            </button>
-        <div className="relative w-full mx-auto max-w-3xl overflow-hidden px-6 flex justify-center items-end">
-            <div className="flex overflow-x-auto space-x-6 py-4">
-            {images.slice(currentIndex, currentIndex + imagesPerPage).map((image, index) => (
-                <div key={index}>
-                    <img className="h-20" src={image.src} alt={image.name}/>
+        <section id="technologies">
+            <h2 className="underline underline-offset-3 decoration-3 decoration-purple-400">Technologies learned</h2>
+            <div className="flex items-center py-2">
+                <button onClick={prevSlide} className="cursor-pointer text-2xl md:text-4xl duration-250 ease-in hover:text-purple-400">
+                    <FontAwesomeIcon icon={faCircleLeft} />
+                </button>
+                <div className="relative w-full mx-auto max-w-3xl overflow-hidden px-6 flex justify-center items-end">
+                <div className="flex overflow-x-auto space-x-6 py-4 animate-fade-in">
+                    {images.slice(currentIndex, currentIndex + imagesPerPage).map((image, index) => (
+                    <div key={index}>
+                        <img className={`h-20`}
+                        src={image.src} alt={image.name}/>
                 
-                    <div className="opacity-0 hover:opacity-100 duration-300 ease-in py-2 text-center text-sm cursor-default">
+                        <div className="opacity-0 hover:opacity-100 duration-300 ease-in py-2 text-center text-sm cursor-default">
                         {image.name}
+                        </div>
                     </div>
+                    ))}
+                </div>      
                 </div>
-            ))}
-            </div>      
-        </div>
-        <button onClick={nextSlide} className="border max-h-fit px-2 py-1 text-xs md:text-base cursor-pointer duration-250 ease-in hover:text-purple-400">
-            <FontAwesomeIcon icon={faArrowRight} />
-        </button>
-        </div> 
+                <button onClick={nextSlide} className="cursor-pointer text-2xl md:text-4xl duration-250 ease-in hover:text-purple-400">
+                    <FontAwesomeIcon icon={faCircleRight} />
+                </button>
+            </div> 
+        </section>
     )
 }
 

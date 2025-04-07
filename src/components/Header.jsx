@@ -1,10 +1,14 @@
 import Navbar from "./Navbar";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
+
 
 function Header({ toggleDarkMode, darkMode }) {
     return (
-        <header className="p-10 md:px-30 lg:px-70 w-full flex flex-col gap-6 justify-self-center justify-items-start">
+        <header className="py-10 w-full flex flex-col gap-6 justify-items-start">
             <Navbar />
-            <div className="flex justify-center">
+            <div>
             <div id="about">
                 <h1>Hi, my name is Paula!</h1>
                 <p>I am a detail-oriented and analytical person with a passion for web programming and design.</p>
@@ -12,8 +16,8 @@ function Header({ toggleDarkMode, darkMode }) {
             </div>
 
             </div>  
-            <button onClick={toggleDarkMode} className="absolute top-3 right-3 border px-2 text-xs md:text-base cursor-pointer duration-250 ease-in hover:text-purple-400">
-                {darkMode ? 'LIGHT' : 'DARK'}
+            <button onClick={toggleDarkMode} className="absolute top-5 right-6 text-lg md:text-2xl cursor-pointer duration-250 ease-in hover:text-purple-400">
+                {darkMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
             </button>
         </header>
     )
