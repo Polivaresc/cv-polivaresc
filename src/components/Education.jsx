@@ -20,7 +20,7 @@ function Education() {
                 <h3 className="mb-2">The Odin Project</h3>
                 <ul className="list-disc px-4">
                   <li><a className="duration-250 ease-in-out hover:text-purple-400" href="https://www.theodinproject.com/paths/foundations/courses/foundations" target="_blank">Foundations <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-1"/></a></li>
-                  <li><a className="duration-250 ease-in-out hover:text-purple-400" href="https://www.theodinproject.com/paths/full-stack-javascript" target="_blank">Full Stack JavaScript <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a></li>
+                  <li><a className="duration-250 ease-in-out hover:text-purple-400" href="https://www.theodinproject.com/paths/full-stack-javascript" target="_blank">Full Stack JavaScript <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-1"/></a></li>
                 </ul>
              </div>
           </div>

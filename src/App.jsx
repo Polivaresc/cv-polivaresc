@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Education from './components/Education';
 import Technologies from './components/Technologies';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -32,8 +32,8 @@ function App() {
         <Education />
         <Technologies />
         <Projects />
-        <Contact />
       </div>
+      <Footer />
     </div>
   )
 }

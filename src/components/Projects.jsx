@@ -5,7 +5,7 @@ function Projects() {
     return (
         <section id="projects">
           <h2 className="underline underline-offset-3 decoration-3 decoration-purple-400">My projects</h2>
-          <div className="flex flex-col gap-6 py-2">
+          <div className="flex flex-col gap-8 py-2">
             {projects.map((project, index) => (
                 <ProjectCard 
                   key={index}

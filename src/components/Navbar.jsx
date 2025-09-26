@@ -6,7 +6,6 @@ function Navbar () {
         { name: 'About', id: 'about'},
         { name: 'Education', id: 'education'},
         { name: 'My Projects', id: 'projects'},
-        { name: 'Contact', id: 'contact'}
     ]
 
     return (
