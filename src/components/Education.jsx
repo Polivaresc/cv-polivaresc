@@ -4,7 +4,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 function Education() {
     return (
-        <section id="education">
+        <section id="education" className="scroll-mt-20">
           <h2 className="underline underline-offset-3 decoration-3 decoration-purple-400">Education</h2>
           <div className="flex flex-wrap self-center py-2">
             <div className="text-wrap w-full md:w-1/2 hover:shadow-md hover:shadow-gray-300 hover:dark:shadow-neutral-700 duration-250 ease-in-out p-3">

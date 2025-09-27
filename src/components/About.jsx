@@ -1,7 +1,7 @@
 
 function About() {
     return (
-      <div id="about" className="mt-20">
+      <div id="about" className="mt-20 scroll-mt-20">
         <h1>Hi, my name is Paula!</h1>
         <p>
           I am a detail-oriented and analytical person with a passion for web
