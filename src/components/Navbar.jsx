@@ -6,10 +6,12 @@ function Navbar () {
         { name: 'About', id: 'about'},
         { name: 'Education', id: 'education'},
         { name: 'My Projects', id: 'projects'},
+        { name: 'Contact', id: 'contact'}
     ]
 
     return (
-        <nav className="flex gap-7 justify-center text-purple-400 font-medium">
+        <div className="">
+            <nav className="flex gap-7 justify-center text-purple-400 font-medium">
             {links.map(link => (
                 <a  href={`#${link.id}`}
                     key={link.id}
@@ -22,7 +24,9 @@ function Navbar () {
                 </a>
             ))}
         
-        </nav>
+            </nav>         
+        </div>
+        
     )
 }
 

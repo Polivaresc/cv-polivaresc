@@ -6,16 +6,9 @@ import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
 function Header({ toggleDarkMode, darkMode }) {
     return (
-        <header className="py-10 w-full flex flex-col gap-6 justify-items-start">
+        <header className="fixed top-0 right-0 left-0 py-8 z-1 bg-gray-100 dark:bg-neutral-900 min-h-16 w-full">
             <Navbar />
-            <div>
-            <div id="about">
-                <h1>Hi, my name is Paula!</h1>
-                <p>I am a detail-oriented and analytical person with a passion for web programming and design.</p>
-                <p>I love learning and enjoy solving problems and creating new digital experiences.</p>
-            </div>
 
-            </div>  
             <button onClick={toggleDarkMode} className="absolute top-5 right-6 text-lg md:text-2xl cursor-pointer duration-250 ease-in hover:text-purple-400">
                 {darkMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
             </button>

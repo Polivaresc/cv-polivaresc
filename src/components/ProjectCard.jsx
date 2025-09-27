@@ -8,8 +8,6 @@ function ProjectCard({ project }) {
         setIsExpanded((prev) => !prev);
     };
 
-    const buttonTheme = "color: '#c47afc', borderColor: #c47afc, '&hover': { backgroundColor: #dbb2ff }";
-
     return (
       <div className="card flex flex-col gap-3">
         <div className="flex items-center gap-2">
