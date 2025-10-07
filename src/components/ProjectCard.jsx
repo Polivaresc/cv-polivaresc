@@ -16,7 +16,8 @@ function ProjectCard({ project }) {
         </div>
 
         <div>
-          <img src={project.image} alt={project.name} className="w-full h-48 object-cover border border-gray-300"/>
+          <img src={project.image} alt={project.name} 
+          className="w-full min-h-24 object-cover border border-gray-300"/>
         </div>
 
         <div>
